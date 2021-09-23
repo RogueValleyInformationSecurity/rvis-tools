@@ -1,6 +1,16 @@
 # rvis-tools
 Publicly-available tools from Rogue Valley Information Security
 
+## honeyport.ps1
+
+Intended for unattend use inside various Windows clients inside an Active Directory domain.
+
+Dependencies: None. 
+
+Inputs: `$Port`, `$Log`, and `$CanaryToken` should each be updated to match your environment's needs.
+
+Outputs: Alerts triggered via https://canarytokens.org/ and local log file with additional details.
+
 ## Get-InternalSubnets.ps1
 
 Intended for use at an administrative Windows console inside an Active Directory domain.
