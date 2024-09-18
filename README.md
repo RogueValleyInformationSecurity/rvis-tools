@@ -27,3 +27,11 @@ Inputs: None needed.
 Outputs: Subnet ranges from domain-joined DHCP servers, as well as the unique set of /24 subnets from domain-joined computers.
 
 This tool will also write warnings about AD-registered DHCP servers that can't be remotely queried. Usually this would mean non-Windows DHCP servers.
+
+## validate-vmx.py
+
+Intended for validating VMware VMX files before submission to automated processes.
+
+Inputs: Path to VMX file.
+
+Outputs: Pass/Fail/Info messages about the VMX file.
