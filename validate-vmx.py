@@ -63,10 +63,10 @@ class VMXValidator:
     def check_credentials_annotation(self):
         annotation = self.vmx_dict.get('annotation', '')
         vmx_line = f"annotation = \"{annotation}\""
-        if annotation and ('username' in annotation.lower() or 'password' in annotation.lower() or 'credentials' in annotation.lower()):
+        if annotation and ('user' in annotation.lower() or 'pass' in annotation.lower() or 'credentials' in annotation.lower()):
             self.add_result('PASS', 'Credentials noted in annotation', vmx_line)
         else:
-            self.add_result('FAIL', 'Credentials must be noted in the annotation (username and password on separate lines)', vmx_line)
+            self.add_result('FAIL', 'Credentials must be noted in the annotation (string search for user/pass/credentials)', vmx_line)
             
     def check_display_name(self):
         display_name = self.vmx_dict.get('displayName', '')
